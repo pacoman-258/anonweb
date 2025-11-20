@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>千早爱音 | Anon Chihaya Official Fanpage</title>
+    <style>
+        /* --- 全局设置 --- */
+        :root {
+            --anon-pink: #FF9EAC;
+            --anon-dark-pink: #E85A71;
+            --bg-color: #FFF0F5;
+            --text-color: #555;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        
+        /* --- 导航栏 --- */
+        nav {
+            background: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(255, 158, 172, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--anon-dark-pink);
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--anon-dark-pink); }
+
+        /* --- Hero 区域 (封面) --- */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #FFF0F5 0%, #FFDEE9 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: var(--anon-dark-pink);
+            text-shadow: 2px 2px 0px #fff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .btn-ui {
+            background-color: var(--anon-dark-pink);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(232, 90, 113, 0.4);
+            transition: transform 0.2s;
+            display: inline-block;
+        }
+
+        .btn-ui:hover {
+            transform: translateY(-3px) scale(1.05);
+            background-color: #d6455d;
+            cursor: pointer;
+        }
+
+        /* --- 个人档案卡片 --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .profile-img-placeholder {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            background-color: #FFDEE9;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--anon-dark-pink);
+            font-weight: bold;
+            border: 4px dashed var(--anon-pink);
+        }
+
+        .profile-info {
+            flex: 1.5;
+        }
+
+        .profile-info h2 {
+            color: var(--anon-dark-pink);
+            border-bottom: 3px solid var(--anon-pink);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: #FFF5F7;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-box strong {
+            display: block;
+            color: var(--anon-dark-pink);
+            font-size: 1.1rem;
+        }
+
+        /* --- MyGO!!!!! 成员关系 --- */
+        .band-section {
+            text-align: center;
+        }
+        
+        .band-section h2 {
+            color: var(--anon-dark-pink);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .member-quotes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .quote-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid var(--anon-pink);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            text-align: left;
+        }
+
+        .quote-card h4 { margin: 0 0 10px 0; color: #333; }
+        .quote-card p { font-style: italic; color: #666; font-size: 0.9rem; }
+
+        /* --- 底部 --- */
+        footer {
+            background: var(--anon-dark-pink);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* --- 动画效果 --- */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-element {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">MyGO!!!!!  Anon</div>
+        <div class="nav-links">
+            <a href="#profile">Profile</a>
+            <a href="#band">MyGO!!!!!</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="floating-element">
+            <h1> 千早爱音 </h1>
+            <p>MyGO!!!!! 的吉他手 | 气氛制造机 | 目标是成为现在的中心！</p>
+            <div class="btn-ui" onclick="alert('うぃ！(Ui!)')">点击这里发出少女的微笑</div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="profile" class="profile-section">
+            <div class="profile-img-placeholder">
+                <img src="file:///C:/Users/Administrator/Desktop/R-C.jpeg" alt="千早爱音" style="width:100%;  border-radius: 15px;">
+                 这里是粉毛大雷吉他手的照片
+                <br>
+            </div>
+            <div class="profile-info">
+                <h2>About Me</h2>
+                <p>大家好！我是千早爱音，是 MyGO!!!!! 不可或缺的吉他手哦！我的目标是让大家都不迷失，一直一直在一起演奏下去！（也要演奏春日影）</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <strong>位置</strong>
+                        作者家里
+                    </div>
+                    <div class="stat-box">
+                        <strong>生日</strong>
+                        9月8日
+                    </div>
+                    <div class="stat-box">
+                        <strong>学校</strong>
+                        羽丘女子学园
+                    </div>
+                    <div class="stat-box">
+                        <strong>兴趣</strong>
+                        蓝色小章鱼 / 社交媒体
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="band" class="band-section">
+            <h2>MyGO!!!!! 的大家</h2>
+            <div class="member-quotes">
+                <div class="quote-card">
+                    <h4>To: 灯 (Tomori)</h4>
+                    <p>“只要灯想唱，我就一定会为你伴奏！因为我们是MyGO!!!!!嘛！”</p>
+                </div>
+                <div class="quote-card">
+                    <h4>To: 爽世 (Soyo)</h4>
+                    <p>“爽世同学，真的很沉重诶... 不过，我也不会放手的哦。”</p>
+                </div>
+                <div class="quote-card">
+                    <h4>To: 立希 (Taki)</h4>
+                    <p>“哈？你这什么态度嘛！...好吧，为了灯，我会加油练习的。”</p>
+                </div>
+                <div class="quote-card">
+                    <h4>To: 乐奈 (Raana)</h4>
+                    <p>“抹茶芭菲就可以搞定吗？真是只自由的野猫啊~”</p>
+                </div>
+                <div class="quote-card">
+                    <h4>To: 祥子 (Sakilin)</h4>
+                    <p>“你知道的，爱祥是正确的”</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Created with  energy by Anon-chan Fans.</p>
+        <p style="font-size: 0.8rem;">"即使迷路也要前进！"</p>
+    </footer>
+<style>
+        /* 爱心的样式 */
+        .heart-effect {
+            position: fixed;
+            font-size: 24px;
+            color: #FF69B4; /* 桃红色 */
+            pointer-events: none; /* 让鼠标可以透过爱心点击下面的按钮 */
+            animation: floatUp 1s ease-out forwards;
+            z-index: 9999;
+            user-select: none;
+        }
+
+        /* 爱心向上飘并消失的动画 */
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px) scale(1.5); /* 向上飘50px并变大 */
+                opacity: 0; /* 变透明 */
+            }
+        }
+    </style>
+
+    <script>
+        // 1. 预先加载音频文件
+        // 注意：这里的 'ui.mp3' 必须和你电脑上的文件名一模一样
+        const uiSound = new Audio('ui.mp3');
+
+        // 可选：调节音量 (0.0 到 1.0)
+        uiSound.volume = 0.5; 
+
+        document.addEventListener('click', function(e) {
+            // --- 音频播放逻辑 ---
+            
+            // 为了支持快速连点 (Ui! Ui! Ui!)，我们需要克隆一个音频节点
+            // 这样上一个声音还没播完，新的声音就可以开始了
+            const soundClone = uiSound.cloneNode();
+            
+            // 播放声音
+            // 注意：浏览器通常要求用户先产生交互才能播放声音，所以放在 click 事件里是完美的
+            soundClone.play().catch(error => {
+                console.log("播放失败，可能是浏览器限制或找不到文件:", error);
+            });
+
+            // --- 以下是之前的爱心特效逻辑 ---
+            const heart = document.createElement('div');
+            heart.innerHTML = '🩷'; 
+            heart.classList.add('heart-effect');
+            heart.style.left = (e.clientX - 10) + 'px';
+            heart.style.top = (e.clientY - 10) + 'px';
+            const randomRotate = Math.random() * 40 - 20; 
+            heart.style.transform = `rotate(${randomRotate}deg)`;
+            document.body.appendChild(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 1000);
+        });
+    </script>
+
+    
+
+</body>
+</html>
